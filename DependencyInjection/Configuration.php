@@ -27,7 +27,8 @@ class Configuration implements ConfigurationInterface
             ->children()
                 ->arrayNode('model')
                     ->isRequired()
-                    ->cannotBeEmpty()
+                    /*throws error with sf4 */
+                    /*->cannotBeEmpty()*/
                     ->children()
                         ->scalarNode('tag_class')->isRequired()->cannotBeEmpty()->end()
                         ->scalarNode('tagging_class')->isRequired()->cannotBeEmpty()->end()
