@@ -21,7 +21,7 @@ class TagManager extends BaseTagManager
     /**
      * @see DoctrineExtensions\Taggable\TagManager::__construct()
      */
-    public function __construct(EntityManager $em, $tagClass = null, $taggingClass = null, SlugifierInterface $slugifier)
+    public function __construct(EntityManager $em, SlugifierInterface $slugifier, $tagClass = null, $taggingClass = null)
     {
         parent::__construct($em, $tagClass, $taggingClass);
         $this->slugifier = $slugifier;
