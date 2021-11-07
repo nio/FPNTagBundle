@@ -14,9 +14,9 @@
     <services>
         <service id="fpn_tag.tag_manager" class="%fpn_tag.tag_manager.class%">
             <argument type="service" id="doctrine.orm.entity_manager" />
+            <argument type="service" id="fpn_tag.slugifier" />
             <argument>%fpn_tag.entity.tag.class%</argument>
             <argument>%fpn_tag.entity.tagging.class%</argument>
-            <argument type="service" id="fpn_tag.slugifier" />
         </service>
     </services>
 
