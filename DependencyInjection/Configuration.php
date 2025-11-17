@@ -18,7 +18,7 @@ class Configuration implements ConfigurationInterface
     /**
      * @see Symfony\Component\Config\Definition\ConfigurationInterface
      */
-    public function getConfigTreeBuilder()
+    public function getConfigTreeBuilder(): TreeBuilder
     {
         $builder = new TreeBuilder('fpn_tag');
         $rootNode = method_exists('Symfony\Component\Config\Definition\Builder\TreeBuilder', 'getRootNode') ? $builder->getRootNode() : $builder->root('fpn_tag');
